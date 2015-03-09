@@ -1,12 +1,35 @@
 {
   "name": "iboard-adventure",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "An adventure workshop that navigates you through building a nodejs photo board application",
+  "main": "runner.js",
+  "bin": {
+    "iboard-adventure": "./runner.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Tom",
-  "license": "ISC"
+  "license": "MIT",
+  "dependencies": {
+    "adventure": "^2.10.0",
+    "babel": "^4.7.3",
+    "adventure-verify": "^2.2.0",
+    "msee": "^0.1.1",
+    "brfs": "^1.4.0",
+    "ecstatic": "^0.6.1",
+    "domify": "^1.3.1",
+    "jsdom": "^4.0.2",
+    "request": "^2.53.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/twilson63/iboard-adventure.git"
+  },
+  "bugs": {
+    "url": "https://github.com/twilson63/iboard-adventure/issues"
+  },
+  "homepage": "https://github.com/twilson63/iboard-adventure"
 }

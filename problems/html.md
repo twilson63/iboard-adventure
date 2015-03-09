@@ -1,6 +1,6 @@
 # Html
 
-We need to modify our index.html file to contain the following:
+We need to modify our public/index.html file to contain the following:
 
     <!doctype html>
     <html>

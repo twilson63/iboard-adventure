@@ -10,14 +10,16 @@ to dynamically modify our presentation when state changes.
 ## Modify app/index.js
 
     var app = require('vbridge');
-    var state = app.state({ img: '/cats.png' });
+    var state = app.state({
+      title: 'Ignite Board',
+      img: '/test-img.jpg'
+    });
     app(document.body, state, render);
     function render(state) { return null; }
 
 ## Install vbridge and virtual-dom
 
     npm i vbridge --save
-    npm i vitual-dom --save
 
 ## Verify Changes
 
@@ -25,7 +27,9 @@ to dynamically modify our presentation when state changes.
 
 `);
 
-exports.verify = verify(function(args, t) { 
-  // confirm file by equals
-  // confirm package.json
-});
+exports.verify = function(args, cb) { cb(true); };
+
+// exports.verify = verify(function(args, t) { 
+//   // confirm file by equals
+//   // confirm package.json
+// });

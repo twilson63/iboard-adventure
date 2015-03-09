@@ -9,7 +9,7 @@ We need to modify our index.html file to contain the following:
     <!doctype html>
     <html>
       <head>
-        <title>I-Board</title>
+        <title>Ignite Board</title>
       </head>
       <body>
         <script src="bundle.js"></script>
@@ -22,7 +22,4 @@ We need to modify our index.html file to contain the following:
 
 `);
 
-exports.verify = verify(function(args, t) {
-  // load index.html
-  // perform t.equals
-})
+exports.verify = function(args, cb) { cb(true); };

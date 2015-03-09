@@ -16,7 +16,8 @@ So the first steps are to setup the project:
     touch server.js
     mkdir app
     touch app/index.js
-    json -I ...
+    json -I -f "package.json" -e 'this.scripts.start="node server.js"'
+    json -I -f "package.json" -e 'this.scripts.test="echo OK"'
 
 ## finally verify setup
 
@@ -24,11 +25,13 @@ So the first steps are to setup the project:
 
 `);
 
-exports.verify = verify(function(args, t) {
-  // check cwd
-  // check package.json
-  // confirm scripts section
-  // check public directory
-  // check app directory
+exports.verify = function(args, cb) { cb(true); };
 
-});
+// exports.verify = verify(function(args, t) {
+//   // check cwd
+//   // check package.json
+//   // confirm scripts section
+//   // check public directory
+//   // check app directory
+
+// });

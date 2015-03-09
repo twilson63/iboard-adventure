@@ -1,25 +1,9 @@
 var msee = require('msee');
 var verify = require('adventure-verify');
+var fs = require('fs');
 
-exports.problem = msee.parse(`
-# Html
-
-We need to modify our index.html file to contain the following:
-
-    <!doctype html>
-    <html>
-      <head>
-        <title>Ignite Board</title>
-      </head>
-      <body>
-        <script src="bundle.js"></script>
-      </body>
-    </html>
-
-## Verify Changes
-
-    $ADVENTURE_COMMAND verify
-
-`);
+exports.problem = msee.parse(
+  fs.readFileSync(__dirname + '/html.md', 'utf-8')
+);
 
 exports.verify = function(args, cb) { cb(true); };

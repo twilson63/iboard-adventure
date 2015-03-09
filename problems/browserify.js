@@ -1,21 +1,10 @@
 var msee = require('msee');
 var verify = require('adventure-verify');
+var fs = require('fs');
 
-exports.problem = msee.parse(`
-# browserify
-
-setup browserify
-
-## Install browserify
-
-    npm i browserify --save-dev
-    json -I -f "package.json" -e "this.scripts.build = 'browserify app/index.js -o public/bundle.js'"
-
-## Verify Changes
-
-    $ADVENTURE_COMMAND verify
-
-`);
+exports.problem = msee.parse(
+  fs.readFileSync(__dirname + '/browserify.md', 'utf-8')
+);
 
 exports.verify = function(args, cb) { cb(true); };
 

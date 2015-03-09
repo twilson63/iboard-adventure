@@ -2,7 +2,7 @@
 
 require('babel/register');
 var adventure = require('adventure');
-var shop = adventure('iboard');
+var shop = adventure('iboard-adventure');
 
 var problems = [
   'welcome',

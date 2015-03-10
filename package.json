@@ -1,6 +1,6 @@
 {
   "name": "iboard-adventure",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An adventure workshop that navigates you through building a nodejs photo board application",
   "main": "runner.js",
   "bin": {

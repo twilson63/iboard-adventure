@@ -10,11 +10,8 @@ var problems = [
   'html',
   'static-server',
   'virtual-dom',
-  'hyperscript',
-  'browserify',
   'socket-io',
-  'twitter-feed',
-  'ship-it'
+  'twitter-feed'
 ];
 
 problems.forEach(function(problem) {

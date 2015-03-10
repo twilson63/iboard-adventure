@@ -15,7 +15,7 @@ We are going to hard code it for now.
       "token_secret": "..."
     }
 
-## Add feed follow to server.js
+## Twitter Follow Code append to server.js
 
     var cfg = require('./config.json');
     var tw = require('node-tweet-stream')(cfg);
@@ -27,10 +27,6 @@ We are going to hard code it for now.
       if (tweet.entities.media) {
         io.emit('img', tweet.entities.media[0].media_url);
       }
-    });
-
-    io.on('connection', function(socket) {
-      socket.emit('title', 'Ignite Board - ' + title);
     });
 
 ## Ready to get started:
